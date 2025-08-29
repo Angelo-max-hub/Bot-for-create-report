@@ -11,10 +11,11 @@ Este projeto foi desenvolvido para demonstrar meu conhecimento da ferramenta Bot
 Para ver o bot em ação, siga estas etapas:
 
 1.  Faça um pull request do repositório.
-2.  Crie um projeto no Google Cloud e habilite a API do Gmail.
-3.  Autorize a conta que será usada para enviar o relatório.
-4.  Coloque as credenciais geradas em `resources/credenciais_oauth.json`, ou coloque em outro caminho e altere o valor de `PATH_TO_CREDENTIALS`. Veja em **Parâmetros de Automação** abaixo.
-5.  Adicione um arquivo CSV com os dados de frequência da turma. O caminho e o nome do arquivo devem corresponder ao valor do parâmetro `PATH_TO_DATA_TABLE` (o padrão é `resources/frequenciaTurmaA.csv`).
+2.  Crie uma pasta na raiz do projeto chamada "resources", onde você o programa colocarão arquivos, alguns deles confidenciais.
+3.  Crie um projeto no Google Cloud e habilite a API do Gmail.
+4.  Autorize a conta que será usada para enviar o relatório.
+5.  Coloque as credenciais geradas em `resources/credenciais_oauth.json`, ou coloque em outro caminho e altere o valor de `PATH_TO_CREDENTIALS`. Veja em **Parâmetros de Automação** abaixo.
+6.  Adicione um arquivo CSV com os dados de frequência da turma. O caminho e o nome do arquivo devem corresponder ao valor do parâmetro `PATH_TO_DATA_TABLE` (o padrão é `resources/frequenciaTurmaA.csv`).
 
 ## Parâmetros de Automação
 
