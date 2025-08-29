@@ -1,0 +1,79 @@
+@startuml Diagrama de atividades do bot
+  start
+  :Coletar dados da frequência da turma;
+  :Gerar um relatório;
+  :Mandar o relatório por e-mail ao professor;
+  stop
+  @enduml
+
+
+  @startuml Diagrama de classes do bot.
+  class LogFile {
+	  +escrever_log(conteudo: String)
+  }
+
+  class Report {
+	  +criar_relatorio
+  }
+
+  class Email {
+	  +enviar_email
+  }
+
+  MainClass "1" --> "1" LogFile : registra logs
+  MainClass "1" --> "1" Report : cria relatório
+  MainClass "1" --> "1" Email : Manda email
+@enduml
+
+
+@startuml Diagrama de sequência do Bot.
+title
+	O Professor faz requisição por um relatório
+end title
+'Style
+skinparam sequenceMessageAlign center
+skinparam sequenceMessageSpacing 500
+
+'Atores (talvez não todos)
+actor Orquestrador order 20
+actor Professor order 10
+participant Manager order 30
+database Tabela_de_dados order 40
+participant Gerador_de_relatórios order 50
+participant GmailManager order 60
+
+'Sequência
+Professor -> Orquestrador : faz um requisição
+activate Orquestrador
+
+Orquestrador -> Manager : passa parâmetros de automação
+activate Manager
+
+Manager -> Tabela_de_dados : extrai frequência
+
+Manager -> Gerador_de_relatórios : envia dados da frequência
+activate Gerador_de_relatórios
+
+Manager <-- Gerador_de_relatórios : acessa caminho para output
+Gerador_de_relatórios --> Gerador_de_relatórios : gera um pdf
+deactivate Gerador_de_relatórios
+
+Manager -> GmailManager : requer envio de e-mail ao Professor
+activate GmailManager
+
+GmailManager --> Manager : acessa caminho para o arquivo com as credencias de acesso da conta Gmail.
+deactivate Manager
+
+GmailManager --> Orquestrador : Envia e-mail com o relatório em anexo
+deactivate GmailManager
+
+Orquestrador -> Professor : Entrega
+deactivate Orquestrador
+
+
+
+'Rodapé.
+footer
+	Orquestrador: Refere-se ao BotCity Orquestrator, plataforma de orquestração de bots Python.
+end footer
+@enduml

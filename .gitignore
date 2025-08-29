@@ -1,0 +1,30 @@
+# Ambiente Virtual
+*venv*
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+
+# Arquivos de configuração de IDE
+.idea/
+.vscode/
+
+# Pacotes e builds da BotCity
+build.*
+dist/
+bot-c*
+
+# Credenciais e segredos
+# NUNCA adicione arquivos de credenciais ao Git.
+resources*
+
+# Outros
+invoke.py
+tasks.py
+pyrightconfig.json
+*pp*
+.projectile
+
+# docs
+docs/images
+docs/saida.txt
