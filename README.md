@@ -43,4 +43,4 @@ Estes parâmetros têm valores padrão, mas podem ser substituídos no Orquestra
     *   **Padrão**: `resources/frequenciaTurmaA.csv`
 
 # Diagramas UML do Projeto.
-Há diagramas UML do projeto que podem ser úteis para entender o processo automatizado (extremamente simples) ou entender a estrutura de classes e módulos (não tão simples). Eles estão dentro da pasta "docs", na forma de um arquivo "plantuml". Para ver os diagramas, será necessário ter o plantUML instalado na máquina e executar o comando "plantuml -tpng <nome do arquivo>", o que gerará 3 imagens png. Você pode ver mais sobre plantuml na sua documentação.
+Há diagramas UML do projeto que podem ser úteis para entender o processo automatizado (extremamente simples) ou entender a estrutura de classes e módulos (não tão simples). Eles estão dentro da pasta "docs", na forma de um arquivo "plantuml". Para ver os diagramas, será necessário ter o plantUML instalado na máquina e executar o comando "plantuml -tpng <nome-do-arquivo>", o que gerará 3 imagens png. Você pode ver mais sobre plantuml na sua documentação.
